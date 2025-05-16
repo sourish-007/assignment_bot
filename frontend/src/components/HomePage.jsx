@@ -20,7 +20,7 @@ export default function HomePage() {
     const botMsg = { id: Date.now() + 1, thinking: true }
     setMessages(prev => [...prev, botMsg])
     try {
-      const res = await fetch('http://localhost:5000/query', {
+      const res = await fetch('https://assignment-bot-rh1c.onrender.com/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: input, useCriticalThinking: isCriticalThinking }),
